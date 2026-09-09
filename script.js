@@ -26,11 +26,8 @@ async function getWeatherData(city) {
             throw new Error(`Error: ${response.status}`);
         }
 
-        const data = await response.json();
-        console.log(data);
-        
+        const data = await response.json();        
         return data;
-
     } catch (error) {
         console.error("Error getting weather data: ", error.message);
     }
