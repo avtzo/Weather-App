@@ -20,7 +20,7 @@ The app features smooth screen transitions, custom keyframe animations, staggere
   * Asynchronous state handling eliminates UI flicker or dynamic data overlap.
   * Native keyboard interaction (triggers search on pressing `Enter`).
   * Auto-clearing input field when resetting screens.
-* **Unit Conversions & Rounding:** Automatically rounds temperatures to nearest integers and converts wind speed from meters/sec to kilometers/hour (`m/s` ➔ `km/h`).
+* **Unit Conversions & Rounding:** Automatically rounds temperatures to nearest integers.
 * **Robust Error Handling:** Seamless error screen routing for non-existent cities or API request failures without breaking application state.
 * **Fully Responsive:** Fluid layouts designed using modern CSS Media Queries for smartphones, tablets, and desktop displays.
 
@@ -35,13 +35,11 @@ The app features smooth screen transitions, custom keyframe animations, staggere
 ## 🛠️ Tech Stack & Concepts Applied
 
 * **HTML5:** Semantic elements, form input handling, accessibility attributes.
-* **CSS3:** Custom CSS Variables, Flexbox, Keyframes Animations (`opacity` staging), `backdrop-filter` Glassmorphism styling, Media Queries.
+* **CSS3:** Custom CSS Variables, Keyframes Animations, `backdrop-filter` Glassmorphism styling.
 * **JavaScript (ES6+):**
   * Async/Await & Fetch API
   * DOM Manipulation & Dynamic Style Injection
-  * Event Listeners (`click`, `keypress`, `forEach`)
-  * JavaScript `switch` statements & Mathematical Utilities (`Math.round`)
-* **Icons & Typography:** Font Awesome 6 & Google Fonts (Poppins).
+* **Icons & Typography:** Font Awesome & Google Fonts (Poppins).
 
 ---
 
