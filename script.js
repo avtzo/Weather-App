@@ -37,18 +37,29 @@ async function getWeatherData(city) {
 }
 
 async function displayWeather(city) {
+    cityName.textContent = "Loading...";
+    temperature.textContent = "--";
+    feelsLike.textContent = "--";
+    windSpeed.textContent = "--";
+    weatherStatus.textContent = "--";
+    weatherIcon.innerHTML = "";
+
     const data = await getWeatherData(city);
 
     if (!data) {
-        resultScreen.classList.add("hidden");
+        searchScreen.classList.add("hidden");
         errorScreen.classList.remove("hidden");
+        resultScreen.classList.add("hidden");
         return;
     }
 
+    searchScreen.classList.add("hidden");
+    resultScreen.classList.remove("hidden");
+
     cityName.textContent = data.name;
     weatherStatus.textContent = data.weather[0].main;
-    temperature.textContent = data.main.temp;
-    feelsLike.textContent = data.main.feels_like;
+    temperature.textContent = Math.round(data.main.temp);
+    feelsLike.textContent = Math.round(data.main.feels_like);
     windSpeed.textContent = data.wind.speed;
     windDirection.style.transform = `rotate(${data.wind.deg}deg)`;
 
@@ -75,20 +86,24 @@ async function displayWeather(city) {
 }
 
 searchCityBtn.addEventListener("click", () => {
-    if (userInput.value === "") {
+    if (userInput.value.trim() === "") {
         alert("Please Enter a City");
         return;
     }
-    searchScreen.classList.add("hidden");
-    resultScreen.classList.remove("hidden");
     displayWeather(userInput.value.toLowerCase());
-
 });
 
 searchAgainBtn.forEach((btn) => {
     btn.addEventListener("click", () => {
+        userInput.value = "";
         searchScreen.classList.remove("hidden");
         resultScreen.classList.add("hidden");
         errorScreen.classList.add("hidden");
     });
+});
+
+userInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        searchCityBtn.click();
+    }
 });
