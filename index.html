@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/7ee5f2ba27.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="search-screen">
+        <div class="search-screen-layout">
+            <h1>Enter a city</h1>
+            <input type="text" id="city-input">
+            <button type="button" id="search-city-btn">Show Weather</button>
+        </div>
+    </div>
+    <div class="result-screen hidden">
+        <div class="result-screen-layout">
+            <h1>Weather in <span id="city-name"></span></h1>
+            <div class="status-info">
+                <p id="weather-icon"></p>
+                <h2 id="weather-status">1</h2>
+            </div>
+            <div class="info">
+                <div><h2>Temperature</h2><p><span id="temperature"></span>°C</p></div>
+                <div><h2>Feels Like</h2><p><span id="feels-like"></span>°C</p></div>
+            </div>
+            <div class="info">
+                <div>
+                    <h3>Wind Speed</h3>
+                    <p><span id="wind-speed"></span>km/h</p>
+                </div>
+                <div class="wind-dir">
+                    <h3>Wind Direction</h3>
+                    <i class="fa-solid fa-arrow-up-long" id="wind-direction-arrow"></i>
+                </div>
+            </div>
+            <button type="button" class="search-again-btn">Search Again</button>
+        </div>
+    </div>
+    <div class="error-screen hidden">
+        <div class="error-screen-layout">
+            <h1>Sorry we couldn't find your city :(</h1>
+            <h2>Check for a typo or try again later</h2>
+            <img src="images/error_img.png">
+            <button type="button" class="search-again-btn">Search Again</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

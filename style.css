@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right,#2193b0, #6dd5ed);
+}
+
+.hidden {
+    display: none;
+}
+
+.search-screen-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+}
+
+.search-screen-layout h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 600;
+}
+
+.search-screen-layout input {
+    font-size: 2rem;
+    width: 85%;
+    overflow-x: auto;
+    text-transform: uppercase;
+    background: transparent;
+    border: none;
+    color: white;
+    border-bottom: 2px solid white;
+    padding-left: 10px;
+    margin: 20px 0;
+}
+
+.search-screen-layout input:focus {
+    border: 2px solid white;
+    outline: none;
+}
+
+#search-city-btn {
+    font-size: 1.6rem;
+    font-weight: 700;
+    background: transparent;
+    color: white;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 8px;
+    margin: 15px 0;
+    transition: 0.2s;
+}
+
+#search-city-btn:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+#search-city-btn:active {
+    transform: scale(0.9);
+}
+
+#search-city-btn:focus {
+    transform: scale(1.1);
+    outline: none;
+}
+
+.result-screen-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    padding: 20px 15px;
+}
+
+.result-screen-layout h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.status-info {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    padding: 15px 0;
+    margin: 20px 0;
+}
+
+.status-info i {
+    font-size: 3rem;
+}
+
+.status-info h2 {
+    font-size: 2rem;
+}
+
+.info {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.info div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info p,
+.info i {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.wind-dir {
+    position: relative;
+    top: 2px;
+}
+
+.info i {
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    padding: 5px;
+}
+
+.search-again-btn {
+    margin: 30px 0 20px 0;
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    background: transparent;
+    border: 3px solid white;
+    border-radius: 20px;
+    padding: 5px;
+    transition: 0.2s;
+}
+
+.search-again-btn:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.search-again-btn:active {
+    transform: scale(0.9);
+}
+
+.search-again-btn:focus {
+    transform: scale(1.1        );
+    outline: none;
+}
+
+.error-screen-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: white;
+    padding: 15px 20px;
+}
+
+.error-screen-layout h1 {
+    font-size: 2rem;
+}
+
+.error-screen-layout img {
+    width: 300px;
+    
+}
