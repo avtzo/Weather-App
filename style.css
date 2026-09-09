@@ -233,6 +233,7 @@ body {
 .error-screen-layout h1 {
     font-size: 2rem;
     opacity: 0;
+    margin-bottom: 15px;
     animation: slideInAndFadeIn 0.2s ease-in 0s forwards;
 }
 
